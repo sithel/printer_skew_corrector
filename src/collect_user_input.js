@@ -22,7 +22,7 @@ async function embedAndPlacePage(output_pdf, original_page, i){
   const y = 0;
   const scale = 1;
   // see library documentation: https://pdf-lib.js.org/docs/api/classes/pdfpage#drawpage
-  newPage.drawPage(embeddedPage, { x: x, y: y, xScale: scale, yScale: scale});
+  newPage.drawPage(embeddedPage, { x: x, y: y, xScale: scale, yScale: scale, rotate: PDFLib.degrees(0)});
 
   // add further mark up here
   newPage.drawLine({
