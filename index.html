@@ -4,12 +4,21 @@
     <link rel="stylesheet" href="assets/styles.css">
     <title>Printer Skew Corrector</title>
     <script src="src/lib/pdf-lib.js"></script>
+    <script src="src/lib/jszip.js"></script>
     <script src="src/lib/file-saver.js"></script>
 </head>
 <body>
 Stuff
 <br>
 Input File: <input type="file" name="input_file" accept=".pdf" id="input_file" /><br>
+X offset (pts) <input type="number" value=0 id="page_translate_x_pts"><br/>
+Y offset (pts) <input type="number" value=0 id="page_translate_y_pts"><br/>
+scale <input type="number" value=1 id="page_scale"><br/>
+rotation (degrees) <input type="number" value=0 id="page_rotation_degrees"><br/>
+<br/>
+download (rather than preview) results <input type="checkbox" id="pdf_download"><br/>
+<br/>
+<input type="button" id="rerender_btn" value="Render" label="Render">
 <br>
 <div class="pdf-preview-frame">
   <iframe id="pdf_preview"></iframe>
